@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+        //document.writeln("Hello vilag!"); //kiíratás
+        //szám,szöveg, boolean  -> 3 alaptípus
+
+        let a = 0; //érték adás egy változónak
+        document.writeln("<br>", a);
+
+        // a=0x11; //hexadecimális  0x -> hexadecimális számrendszer  1*16 +1*1  = 17
+        // document.writeln("<br>" ,a);
+
+        //  a=011; //oktális   0 -> oktális számrendszer 8*1 + 1*1 = 9
+        //   document.writeln("<br>" ,a);
+
+        { //block
+
+            var b = "einvofw";
+            document.writeln(b);
+        }
+
+        document.writeln(b);
+
+
+        document.writeln(`<br> ${a} működik`); //formázott kiíratás
+
+        document.writeln('<br>9*7+113= ', 9 * 7 + 113)
+
+
+        //operátorok
+
+
+        a += 10;
+        document.writeln("<br>", a)
+
+        a *= 2;
+        document.writeln("<br>", a)
+
+        a **= 2; //hatványozás
+        document.writeln("<br>", a)
+
+        a = a % 2;
+        document.writeln("<br>", a)
+
+        document.writeln("<br>", a == "0");  //érték hasonlítás
+        document.writeln("<br>", a === "0"); //típus hasonlítás
+
+        document.writeln("<br>");
+
+
+        let c;
+        document.writeln("<br>", c);
+
+        document.writeln("<br>");
+
+        let d = null;
+        document.writeln("<br>", d);
+
+        //gyakorló feladat
+        document.writeln("<br>");
+
+        //írassuk ki egy idézőjelen belül az váltózó értéké: mondatot és a változó értékét és utána, hogy hurrá
+
+        document.writeln(`az a változó értéke: ${a}, hurrá`)
+
+        //hogy tudok mégegyszer deklarálni egy "a" nevű változó
+
+        {
+            let a = 3; //változó:egy olyan névvel ellátott memóriaterület, melynek értékét lehet változtatni
+            document.writeln("<br>", a);
+        }
+
+
+        //const  (javaban final)
+
+        //const pi= 3.14; //konstans: értékét nem lehet megváltoztatni
+        //document.writeln("<br>", e);
+
+        //pi= 3.15;
+        //document.writeln("<br>", e);
+
+
+
+        //TÖMBÖK  (ARRAY) .push() -> beszúrás, végére teszi   .pop()  -> kiveszünk a végéről
+
+        const tomb= [];
+        document.writeln("<br>", tomb);
+
+        tomb.push(2);
+        document.writeln("<br>", tomb);
+        tomb.push("a");
+        document.writeln("<br>", tomb);
+
+        tomb.push(true);
+        document.writeln("<br>", tomb);
+
+        document.writeln("<br>", tomb[1]);
+
+        tomb.push(4.2);
+        document.writeln("<br>", tomb);
+
+
+        tomb.pop();
+        document.writeln("<br>", tomb);
+
+
+        tomb.shift(); //elejéről vesz ki
+        document.writeln("<br>", tomb);
+
+        tomb.unshift("elejére"); //elejére szúr be      (inkább a végére szúrjunk, de a nyelv szintaxisa megengedi, hogy az elejére is tudunk beszúrni)
+        document.writeln("<br>", tomb);
+
+
+        const tomb2= [1, 2, 6, "szia"];
+
+        document.writeln("<br>", tomb2);
+
+        tomb2[2]=4.7; //elem értékének megváltoztatása
+        document.writeln("<br>", tomb2);
+
+
+        tomb2.includes(2); //tartalmazza-e?  (eldöntés tétele)
+        document.writeln("<br>", tomb2.includes(2) );
+
+
+    </script>
+
+</body>
+
+</html>

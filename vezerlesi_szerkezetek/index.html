@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vezérlési szerkezetek</title>
+</head>
+
+<body>
+    <script>
+        // VEZÉRLÉSI SZERKEZETEK
+
+        // 1. szekvenciális
+        // 2. elágazás  (feltétel)
+        // 3. ciklus (for: határozott lépésszámú, while)
+
+
+        // véletlen szám generálása
+
+        // Math.floot(Math.random() max-min)+ min;
+
+        let a = Math.round(Math.random() * 5); // [0, 1[    floor - lefelé kerekít   round - matematikai kerekítés 
+        document.writeln("<br>", a);
+
+
+        //generáljunk egy 5- 10 közötti számot
+
+        let b= Math.floor(Math.random()*5)+5;
+        document.writeln("<br>", b);
+
+        //generájunk -5 és 4 közötti számokat, ha negatív akkor írja ki, hogy negatív, ha pozitív akkor, hogy pozitív egyébként, hogy 0
+
+        let c= Math.floor(Math.random()*10)-5;
+        document.writeln("<br>", c);
+
+        if(c<0){
+            document.writeln("<br>", "negatív");
+        }
+        else if (c>0){
+            document.writeln("<br>", "pozitív");
+        }
+        else{
+            document.writeln("<br>", "nulla")
+        }
+
+        //generáljuk egy számot és írjuk ki hogy páros e vajon
+
+        let d= Math.floor(Math.random()*5);
+
+        if(d%2==0){
+            document.writeln("<br>", "páros")
+        }
+        else{
+            document.writeln("<br>", "páratlan")
+        }
+
+        let e="";
+
+        //switch  case
+
+        switch(a){
+            case 0: e="nulla";
+            break;
+            case 1: e="egy";
+            break;
+            case 2: e="kettő";
+            break;
+            case 3: e="három";
+            break;
+            case 4: e="négy";
+            break;
+            case 5: e="öt";
+            break;
+            default: e= "más";
+            break;
+
+
+        }
+        document.writeln("<br>", e);
+
+        if(1=="1"){
+            document.writeln("<br> egyenlő");
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Függvények</title>
+</head>
+<body>
+    <script>
+        
+        const tel1={
+            gyarto:"Nokia", //kulcsértékpárok
+            tipus: "Lumina",
+            ram:3,
+            rom:64,
+            kepernyo:6.2,
+            dualSim:true,
+            teljesNev: function(){
+                return this.gyarto +" "+this.tipus;
+            }
+
+            
+
+        };
+
+        document.writeln(tel1.teljesNev())
+
+        console.log(tel1);
+
+        document.writeln("<br>", tel1.kepernyo);
+        document.writeln("<br>", tel1.dualSim);
+
+        document.writeln("<br>", tel1.dualSim);
+
+        tel1.ar=199000;
+
+        console.log(tel1);
+
+        tel2=new Object();
+   
+
+        //FÜGGVÉNYEK
+
+
+        function osszead(a,b){
+            return a+b;
+        }
+
+
+        document.writeln("<br>", osszead(9,7));
+
+        document.writeln("<br>", osszead("szia","cica"));
+
+        //írj fügyvényt amely eldönti hogy osztható e héttel
+
+       
+
+        function oszthato(a){
+            return a%7==0 ? "osztható" : "nem osztható";
+        }
+
+
+        document.writeln("<br>", oszthato(7));
+
+        //tanulo1 osztály, vezetéknév, keresztnév, osztály
+        //legyen egy metódusa amely visszaad mindent
+
+        const tanulo={
+            vezetekNev:"Varga",
+            keresztNev:"Tímea",
+            osztaly:"1/13B",
+            minden:function(){
+                return this.vezetekNev +" "+ this.keresztNev+" "+ this.osztaly
+            }
+
+
+
+        };
+
+        console.log(tanulo);
+
+        document.writeln("<br>", tanulo.minden());
+
+
+        //auto osztály: gyártó, típus, tartályűrtartalom, katalizátor, szállítható személyek száma
+
+
+        const auto1={
+            marka:"BMW",
+            tipus:"X5",
+            kcm: 3000,
+            katalizator:true,
+            személy: 4,
+
+            motor:function(){
+                return this.kcm+" "+this.katalizator;
+            },
+
+            auto:function(){
+                return this.marka+" "+this.tipus+" "+this.személy;
+            }
+
+
+        };
+
+        document.writeln("<br>", auto1.motor());
+        document.writeln("<br>", auto1.auto());
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

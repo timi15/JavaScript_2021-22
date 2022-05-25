@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyakorlás</title>
+</head>
+
+<body>
+    <script>
+
+        const teglalap1 = {
+            a: 3,
+            b: 4,
+            kerulet: function () {
+                return 2 * (this.a + this.b);
+
+
+            },
+            nagyobb: function () {
+                return this.a > this.b ? this.a : this.b
+            }
+
+
+        }
+
+        document.writeln("<br>", teglalap1.kerulet());
+        document.writeln("<br>", teglalap1.nagyobb());
+
+
+        // írjunk egy függvényt ami visszadja hogy, mennyi az 1. paraméterként megadott szám osztva a második paraméterként megadott szám maradéka mennyi
+
+
+        function maradek(a, b) {
+            return a % b;
+        }
+
+        //hozzunk létre egy halamazt 
+
+        const h = new Set([1, "szia", true]);
+
+        //van e benne "true"
+        document.writeln("<br>", h.has(true));
+
+        //adjunk hozzá olyan értéket ami van benne
+
+        h.add(true);
+
+        //írassuk ki a méretét
+        document.writeln("<br> mérete:", h.size);
+
+        //hozzunk létre egy map-et legyen benne két kulcsértékpárral
+
+        const m = new Map([  //kulcsértékpárokat tartalmaz, bármilyen adatszerkezetet tartalmazhat
+            [1, true],
+            ["string", 5.4]
+
+        ]);
+
+        //írassuk ki a stringhez tartozó értéket
+
+        document.writeln("<br>", m.get("string"));
+
+        //állítsuk át az értékét az 1-hez tartozónak
+        m.set(1, false);
+        document.writeln("<br>", m.get(1));
+
+        //írjunk egy eljárást, ami kiírja a első paraméterként kapott map második paraméteként megkapott kulcsához tartozó értéket
+
+        function ertek(map, kulcs) {
+            document.writeln(map.get(kulcs));
+        };
+
+        document.writeln("<br>");
+        ertek(m, 1);
+
+        //hozzunk létre egy objektumok
+
+        const SzaboDani = {
+            okos: true,
+            humoros: false,
+            progGyak: 2,
+            kozepsoNev: "Leila Hercegno",
+            kozepso: function () {
+                document.writeln(this.kozepsoNev);
+            }
+
+        };
+        document.writeln("<br>");
+        SzaboDani.kozepso();
+
+        //adjunk hozzá egy új tulajdonságot
+
+        SzaboDani.lakhely = "Tatooine";
+        console.log(SzaboDani);
+
+        //írassuk ki kétféleképpen a lakhelyét
+
+
+        document.writeln("<br>", SzaboDani.lakhely)
+        document.writeln("<br>", SzaboDani["lakhely"])
+
+
+        //hozzunk létre egy függvényt a mely visszaadja a paraméterként kapott három oldalról, hogy a háromszög megszerkeszthető el
+
+        function szerk(a, b, c) {
+            return (a + b > c) && (a + c > b) && (c + b > a) ? true :false;
+        }
+
+        document.writeln("<br>", szerk(1, 2, 3));
+
+        //készítsünk egy halmazt
+        const zsak = new Set(["krumpli", -1, false]);  //nem hivatkozhatok indexszel, egy érték csak egyszer szerepelhet benne, halmaz adatszerkezet
+
+        zsak.delete("krumpli");
+        document.writeln("<br>", zsak.size); //size után nem kell () mivel ez egy property és nem egy metódus
+
+    </script>
+</body>
+
+</html>

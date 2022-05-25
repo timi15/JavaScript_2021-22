@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osztályok</title>
+</head>
+<body>
+    <script>
+
+        //Osztályok
+
+        // kulcsérték párokat tartalmaz= név és ahhoz rendelünk értéket
+
+        const auto1={
+            rendSzam:"ABC123",
+            marka:"BMW",
+            tipus:"X5",
+            kcm: 3000,
+            katalizator:true
+
+        };
+
+        document.writeln(auto1.rendSzam); //hivatkozás egyes elemekre
+        document.writeln("<br>");
+       // document.writeln(auto1);
+
+        console.log(auto1);
+        document.writeln("<br>");
+
+        document.writeln(auto1["rendSzam"]);
+
+        document.writeln("<br>");
+
+        const t="tipus";
+
+        document.writeln(auto1[t]);
+
+        document.writeln(auto1.t); // nem talál az auto1 osztályon belül t értéket -> undefined
+
+        auto1.szin="oliva"; //hozzáadni
+
+        console.log(auto1); 
+
+        delete auto1.szin; //elvenni
+        console.log(auto1);
+
+
+        //hozzunk létre egy tanulo1 objektumot, amelyben legyen egy név Béla, IQ 101 , iskola SZIKSZI, 
+        //legyen egy olyan objektum hogy tanulo2 név Géza, IQ 110, iskola Bánki
+
+        //írassuk ki annak az iskoláját, akinek nagyobb az IQ-ja
+
+        const tanulo1={
+            nev:"Béla",
+            IQ:101,
+            iskola:"SZIKSZI"
+
+        }
+
+        const tanulo2={
+            nev:"Géza",
+            IQ:110,
+            iskola: "Bánki"
+        }
+
+        document.writeln("<br>", tanulo1.IQ > tanulo2.IQ ? tanulo1.iskola : tanulo2.iskola);
+
+        //írassuk ki azt, aki előrébb van a névsorban
+
+        document.writeln("<br>", tanulo1.nev < tanulo2.nev ? tanulo1.nev : tanulo2.nev);
+
+
+        //a tanulo1 és tanulo2 rakjuk bele egy tömbe
+
+        const tomb=[tanulo1, tanulo2];
+
+        document.writeln("<br>", tomb[0].nev);
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

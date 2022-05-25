@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyakorlás</title>
+</head>
+<body>
+    <script>
+
+        let a =4;
+        document.writeln("<br>", a);
+
+        a=5.2;
+        document.writeln("<br>", a);
+        document.writeln("<br>", ++a);
+        document.writeln("<br>", a++);
+
+        document.writeln("<br>", a);
+
+        //let b;
+        //document.writeln("<br>", b);
+
+        //csökkentsük a változó értékét három féle módon
+
+
+        let c=5;
+        document.writeln("<br>", c);
+
+        c--;
+        document.writeln("<br>", c);
+
+        c=c-1;
+        document.writeln("<br>", c);
+
+        c-=1;
+        document.writeln("<br>", c);
+
+
+        //döntsük el egy számről hogy változó osztható e 3-mal
+
+        document.writeln("<br>", 1999%3==0);
+
+        // feltétel   ? igaz     : hamis
+
+        document.writeln("<br>", 5<6 ? 1  : 0);
+
+        document.writeln("<br>", 11==12 ? 1  : 0);
+
+        document.writeln("<br>", -1 ? 1  : 0);
+
+        document.writeln("<br>", 1 ? 1  : 0);
+
+        document.writeln("<br>", 8 ? "igaz"  : "hamis");
+
+        document.writeln("<br>", 0 ? "igaz"  : "hamis");
+
+
+        document.writeln("<br>",1=="1");
+        document.writeln("<br>",1==="1");
+
+        const t = [1, 2, 3];
+        document.writeln("<br>", t);
+
+        t.push("alma");
+
+        document.writeln("<br>", t);
+
+        t.pop("alma");
+        document.writeln("<br>", t);
+
+        t.unshift("elejére");
+        document.writeln("<br>", t);
+
+        t.shift("elejére");
+        document.writeln("<br>", t);
+
+        document.writeln("<br>", t.includes(1));
+
+        document.writeln("<br>", t.slice(2));
+
+        document.writeln("<br>", t.slice(1, 3));
+
+        t.reverse();
+        document.writeln("<br>", t);
+
+        //elsőtől az utolsó előttiig
+
+        document.writeln("<br>", t.slice(0, t.length - 1));
+
+        //ne írassuk ki az elsőt
+
+        document.writeln("<br>", t.slice(1, t.length - 1))
+
+        //szúrjuk be a tömb elejére hogy a 11 a tizenhatos számrendszerbe 22 a nyolcasba
+
+        t.unshift(0x11 < 022 ? 0x11 : 022);
+        document.writeln("<br>", t)
+
+        //írassuk ki a képernyőre, hogy tartalmazza e a tömb
+        // a 21 nyolcas számrendszerbeli számot
+
+
+        document.writeln("<br>", t.includes(021));
+
+        document.writeln("<br>", t.includes(022));
+
+        t.reverse();
+        document.writeln("<br>", t);
+
+        //írasd ki a képernyőre , 372 16os számrendszerben osztható e 7-tel
+
+        document.writeln("<br>", 0x372 % 7 == 0);
+
+        //írasszk ki a képernyőre,hogy 19^4+3 vagy 17^5-7 a kisebb
+
+        document.writeln("<br>", 19**4+3<17**5-7 ? "19**4+3" :"17**5-7" );
+
+        //tegyünk a végére egy új elemet és írassuk ki az elemeit kivéve az utolső kettőt
+
+        t.push("szia");
+
+        document.writeln("<br>", t.slice(0,t.length-2));
+
+       //hozz létre 5 db elemi típusú változót
+
+       //const nem változó
+
+       //Egy üres tömb elejére szúrjunk be egy három különböt típusú adatot tartalmazó tömböt
+
+       const tomb=[];
+       tomb.unshift([1, true, "szia"]);
+       document.writeln("<br>", tomb);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

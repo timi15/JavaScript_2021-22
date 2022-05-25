@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciklusok</title>
+</head>
+
+<body>
+    <script>
+
+        // 0-tól 20-ig írassuk ki a páros számokat
+        document.writeln("<br>");
+        for (i = 0; i <= 20; i += 2) {
+            document.writeln(i, " ");
+        }
+
+        document.writeln("<br>");
+
+        // ugyanez while  ciklussal
+        let j = 0;
+        while (j <= 20) {
+            document.writeln(j, " ");
+            j += 2;
+        }
+
+        document.writeln("<br>");
+
+        // előltesztelő: mielőtt elindul a ciklusmag  a feltételt megvizsgálja
+        // hátultesztelő: a feltétel a ciklusmag után van
+        let k = 0;
+        do {
+            document.writeln(k, " ");
+            k += 2;
+        } while (k <= 20);
+
+        document.writeln("<br>");
+
+        // véletlen számokat mindaddig amig nullát nem kapunk utána lépjunk ki a ciklusből
+        //-5 és 5 között
+
+        do {
+            k = Math.floor(Math.random() * 10) - 5;
+            document.writeln(k, " ")
+        } while (k != 0);
+
+
+        document.writeln("<br>");
+
+        // 1-90 öttösjöttő húzóprogram
+        // egy szám egyszer szerepelejen
+        //halmaz adatszerkezet
+
+        const halmaz = new Set();
+
+        do {
+            halmaz.add(Math.floor(Math.random() * 90) + 1)
+
+        } while (halmaz.size < 5);
+
+        console.log(halmaz);
+
+        // -10 és 10 közötti számot generáljuk mindameddig 0 nem generál és adjunk össze a pozitívakat
+
+        let osszeg = 0;
+        let e;
+
+        do {
+            e = Math.floor(Math.random() * 20) - 10;
+            document.writeln(e, " ")
+            if (e > 0) {
+                osszeg += e;
+            }
+
+        } while (e);
+
+        document.writeln("<br>", osszeg);
+
+        document.writeln("<br>");
+
+        // forin 
+        // objectumok esetén végig fut a kulcsokon
+
+        const o = {
+            a:3,
+            b:4,
+            c:5
+        };
+
+        for(x in o){
+           // document.writeln(x, ": ", o[x])
+            
+            document.writeln(o[x])
+        }
+        
+        const tomb= [1, 3, 5, 9, 10, 0]
+
+        for(x in tomb){
+            document.writeln(tomb[x])
+        }
+
+        document.writeln("<br>");
+
+        // generájuk új számokat mindaddig mig nulla, rakjuk bele a tombe a végére, a nullát nem 
+        // a végén írassuk a tombot
+        const t=[];
+        let y;
+        do {
+           t.push(y= Math.floor(Math.random()*20)-10);
+           
+
+        } while (y!=0);
+
+        document.writeln("<br>", t)
+
+        //generájunk 10- 20 közötti számokat addig mig nem 20 és írassuk ki a 3-mal oszthatóakat
+        
+        let v;
+        do {
+            v= Math.floor(Math.random()*10)+10;
+            if( v%3==0){
+                document.writeln(v, " ");
+            }
+
+        } while (v<=20);
+
+        //hozzunk létre egy objektumot és ebben legyen 5 kulcsértékpár írassuk ki azokat az értékeket amelyek nagyobbak mint 8
+
+        const c= {
+            a:1,
+            b:3,
+            c:9,
+            d:19,
+            e:-7
+
+        };
+
+        for(x in c){
+            if(c[x]>8){
+                document.writeln(x, " ");
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

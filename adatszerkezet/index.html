@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2022.02.18</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script>
+      const br = "<br/>";
+
+      /* function hatvany(a, n) {
+  return a ** n;
+}
+
+function kisebb(a, b) {
+  return a < b ? a : b;
+}
+
+document.writeln(hatvany(2, 10), br);
+
+document.writeln(kisebb(12, 10), br);
+
+//Halmaz (Set) adattípus létrehozása és feltöltése elemekkel
+const s = new Set([1, 2, "szia"]);
+
+//A size a property visszaadja, hogy mennyi elem van a Halmazban.
+document.writeln("Halmaz mérete: ", s.size, br);
+
+//A clear metódus eltávolítja az elemeket a Halmazból.
+// document.writeln(s.clear());
+
+//A has metódus visszaadja, hogy a kapott paraméter benne van-e a halmazban, vagy sem. Visszatérési értéke boolean.
+document.writeln(s.has(2), br);
+
+//A delete metódus kitörli a kapott paraméter értékének megfelelő elemet a Halmazból.
+s.delete(2);
+
+document.writeln("Halmaz mérete: ", s.size, br); */
+
+      //A map kulcs-érték párok szolgálására szolgáló adatszerkezet.
+      //Olyan mint egy telefonkönyv.
+      //(A telefonkönyvben van egy szám és egy hozzátartzozó név.)
+      const m = new Map([
+        ["elso", 1],
+        ["2", "ketto"],
+        [true, "igaz"],
+      ]);
+
+      document.writeln("Set mérete: ", m.size, br);
+
+      //A set metódus hozzáad egy kulcs-érték párt a Maphez.
+      //harmadik a kulcs, az értéke pedig 3.14
+      m.set("harmadik", 3.14);
+
+      document.writeln("Set mérete: ", m.size, br);
+
+      //A delete metódus kitörli a harmadik kulcshoz tartozó kulcs-érték párt.
+      m.delete("harmadik");
+
+      document.writeln("Set mérete: ", m.size, br);
+
+      //Adjunk hozzá a maphez egy olyan kulcs érték párt, ahol a kulcs és az érték is boolean.
+      m.set(false, true);
+
+      //Töröljük ki a true kulcshoz tartozó kulcs-érték párt.
+      m.delete(true);
+
+      //Írassuk ki a false kulcshoz tartozó értéket.
+      document.writeln("A false kulcshoz tartozó érték: ", m.get(false), br);
+
+      //Hozzunk létre egy haromszog1 objectet
+      //a legyen 2
+      //b az legyen 3
+      //c az legyen 4
+
+      const haromgszog1 = {
+        a: 2,
+        b: 3,
+        c: 4,
+
+        kerulet: function () {
+          return this.a + this.b + this.c;
+        },
+      };
+
+      document.writeln("Kerület értéke: ", haromgszog1.kerulet(), br);
+
+      //Negyzet2 objektum és legyen kerülete és területe
+      //Oldalai értéke: 1
+      const negyzet2 = {
+        a: 1,
+
+        kerulet: function () {
+          return 4 * this.a;
+        },
+
+        terulet: function () {
+          return this.a ** 2;
+        },
+
+        udvozlet: function () {
+          return "Szia, örülök, hogy találkoztunk :)";
+        },
+      };
+
+      document.writeln("Négyzet kerülete: ", negyzet2.kerulet(), br);
+
+      document.writeln("Négyzet területe: ", negyzet2.terulet(), br);
+
+      //udvozlet metodus
+      //Írja ki, hogy "Szia, örülök, hogy találkoztunk!"
+
+      document.writeln(negyzet2.udvozlet(), br);
+
+      //Hozzunk létre egy ember1 nevű objektumot
+      //Legyen egy vNev, kNev, lakhely, taj-szám, nemzetiség, nem
+      //Csináljunk egy olyan metódust, ami kiiírja a teljes nevet és a lakhelyet. Metódus neve legyen bela
+
+      const ember1 = {
+        vNev: "Futó",
+        kNev: "Tibor",
+        lakhely: "Kótaj",
+        tajSzam: "",
+        nemzetiseg: "magyar",
+        nem: "férfi",
+        bela: function () {
+          return this.vNev + " " + this.kNev + " " + this.lakhely;
+        },
+      };
+
+      document.writeln(ember1.bela(), br);
+
+      //Írjunk egy eljárást, ami kiírja nekünk a paraméterként kapott 3 szám szorzatát
+
+      function sz(a, b, c) {
+        document.writeln(a * b * c);
+      }
+
+      sz(2, 3, 4);
+
+      //Írjunk eljárást, ami kiiírja, hogyha 3-al osszuk a paramétert, mit kapunk.
+
+      function harommal(num) {
+        document.writeln(num / 3);
+      }
+
+      harommal(7);
+    </script>
+  </body>
+</html>

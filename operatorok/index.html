@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operátorok</title>
+</head>
+<body>
+    <script>
+
+        //GYAKORLÁS
+
+
+        //a értékét növeld eggyel három féle módon
+
+        let a = 5;
+       
+        //első 
+        a=a+1;
+        document.writeln("<br>", a);
+
+
+        a+=1;
+        document.writeln("<br>",  a);
+
+        a++;
+        document.writeln("<br>", a);
+
+
+        //írassuk ki 117 nyolcas számrendszerben
+
+        let b=0117;
+        document.writeln("<br>", b);
+        
+
+        //írassuk ki a 777 nyolcas számrendszerben
+        document.writeln("<br>", 0777);
+
+        //írassuk ki a 39 tizenhatos számrendszerben
+
+        document.writeln("<br>", 0x39);
+
+        //írassuk ki a FF tizenhatos számrendszerben
+
+        document.writeln("<br>", 0xFF);
+
+        //hozzunk létre két változót és két konstanst -> négy különböző típus
+
+        let szam;
+        document.writeln("<br>", szam)
+        let szam2=true;
+        document.writeln("<br>", szam2)
+        const szam3=3.14;
+        document.writeln("<br>", szam3)
+        const szam4='Szia';
+        document.writeln("<br>", szam4)
+
+
+        //írassuk ki 77 nyolcas számrendszerben > és 39 tizenhatos számrendszerben  ->true or false
+
+        document.writeln("<br>", 077 > 0x39);
+
+        //írassuk ki hogy 5==4-gyel
+
+        document.writeln("<br>", 5 == 4); 
+
+        //kifejezés "?" ha igaz   ":" ha hamis
+
+        document.writeln("<br>", 5<6 ?'igaz' :'hamis');
+
+
+        //írassuk 4 nyolcas számrendszerben egyenlő 2 tizenhatos számrendszerben
+        // ha igaz írjuk ki hogy "I", ha hamis akkor "H"
+
+
+        document.writeln("<br>", 04 == 0x2 ?"I" :"H");
+
+
+        //írassuk ki a "3^7 / 4" és ennek mennyi a maradéka
+
+        document.writeln("<br>", 3**7 % 4);
+
+        // TÖMBÖK
+
+
+        const t = [2, 11.3 , "Szia", true];
+
+        // a tömbbe rakjuk bele egy tömböt
+        t.push([1, 2, 3]);
+
+        document.writeln("<br>", t);
+
+        // vegyük el a tömbünk elejéről az első elemet
+
+        t.shift();
+        document.writeln("<br>", t);
+
+        //szúrjuk be az elejére hogy "elso"
+
+        t.unshift("elso");
+        document.writeln("<br>", t);
+
+        //utolsó elemének kiíratása
+
+        document.writeln("<br>", t[t.length-1]); //utolsó eleme egy tömb volt
+
+        //van e "1" a tömbben
+
+        document.writeln("<br>", t.includes(1));
+
+        //írassuk ki visszafele a tömböt
+        t.reverse();
+        document.writeln("<br>", t);
+
+       //írassuk ki a 2-es indextől a tömböt
+
+        document.writeln("<br>", t.slice(2));
+
+        //írassuk ki a [2,4[
+
+        document.writeln("<br>", t.slice(2, 4));
+
+        //hozzunk létre egy üres tömböt és rakjuk bele azt az értéket hogy 5>6
+
+        const tomb= [];
+        tomb.push(5>6);
+
+        document.writeln("<br>", tomb.length);  //elemek száma: tomb.length
+
+        //szurjuk be az elejére hogy 3^4-2^5
+        tomb.unshift(3**4-2**5);
+        document.writeln("<br>", tomb);
+
+        // attól függően hogy, ha 5>6 adjuk hozzá hogy "nem", de egyébként "igen" ,rakjuk be a végére
+
+        tomb.push(5>6 ?"nem" :"igen");
+        document.writeln("<br>", tomb);
+
+        // 177 nyolcas számrendszerben lévő számot rakjuk be az elejére
+
+        tomb.unshift(0177);
+        document.writeln("<br>", tomb);
+
+        // a 26 nyolcas számrendszerbe és a 17 tizenhatos számrendszerben lévő számot a kettő közül a kisebbet szúrja be, végére
+
+        tomb.push((026>0x17) ?026 :0x17);
+        document.writeln("<br>", tomb);
+
+
+
+    </script>
+</body>
+</html>
